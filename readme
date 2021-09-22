@@ -1,0 +1,12 @@
+Prerequisites of Windows Patching Script
+
+1. This patching script relies heavily on the publicaly available Powershell Module PSWindowsUpdates version 1.
+   The module must be downloaded and saved in the following location on each server: %WINDIR%\System32\WindowsPowerShell\v1.0\Modules
+   The PSWindowsUpdate module is stored in a zip file in folder "Install-WindowsPatches files"
+
+2. Execute command with admin privilages: Import-Module PSWindowsUpdate
+
+3. The execution policy for each server must be set to the following (must be admin):  Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted -Force
+
+4. In order to run the script from an RSAT server each server needs to added to the local winrm trusted hosts list (must be admin)
+   Execute Command: winrm set winrm/config/client ‘@{TrustedHosts="server1,server2,…"}’
