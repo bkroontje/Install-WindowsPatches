@@ -1,5 +1,5 @@
 ﻿#-------------------------------------------------------------------------
-# Author      : kroontjb
+# Author      : bkroontje
 # FileName    : Install-WindowsPatches.ps1
 # Version     : 1.0
 # Revision    :
@@ -22,7 +22,7 @@ $server_list = Read-Host "file path of server list"
 
 
 #leave line below for testing purposes
-#[System.Collections.ArrayList]$complist = @((Get-Content -Path "c:\ps\lists\server_list.txt")) 
+#[System.Collections.ArrayList]$complist = @((Get-Content -Path "<FilePathHere>")) 
 
 #verbose switch
 $VerbosePreference = "continue"
